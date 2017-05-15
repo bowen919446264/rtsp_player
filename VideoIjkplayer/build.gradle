@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+
+    compile project(':ijkplayer-java')
+    compile project(':ijkplayer-armv7a')
+    compile project(':ijkplayer-exo')
+//    compile project(':ijkplayer-x86')
+//    compile project(':ijkplayer-armv5')
+
+//    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.2'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.2'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.2'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.2'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.2'
+}

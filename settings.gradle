@@ -1,0 +1,1 @@
+include ':app', ':VideoIjkplayer', ':ijkplayer-java',':ijkplayer-armv7a'
