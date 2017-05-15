@@ -4,6 +4,7 @@ It could play rtsp stream by use ijkplayer
 当前IJKPlayer使用的库版本为k0.7.9
 修改IJKPlayer的so文件支持rtsp 协议。
 可以根据具体的需求修改参数
+
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "max_cached_duration", 3000);
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "infbuf", 1);
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "packet-buffering", 0);
